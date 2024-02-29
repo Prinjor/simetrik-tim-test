@@ -111,6 +111,7 @@ if conn.is_connected():
     conn.close()
 # Llamar a la función principal
 add_cross_transaction_column(data_clap, data_bansur)
+add_cross_transaction_column(data_bansur, data_clap)
 
 exercise_5_6(data_clap, 'SI')
 exercise_5_6(data_bansur, 'NO')
