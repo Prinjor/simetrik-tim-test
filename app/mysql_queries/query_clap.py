@@ -1,0 +1,14 @@
+sql_query_clap = """
+    SELECT
+        'CLAP' AS ORIGEN,
+        CONCAT(c.INICIO6_TARJETA, LPAD(c.FINAL4_TARJETA, 4, '0')) as TARJETA,
+        TIPO_TRX,
+        MONTO,
+        DATE(c.FECHA_TRANSACCION) AS FECHA_TRANSACCION,
+        CODIGO_AUTORIZACION,
+        ID_BANCO AS ID,
+        FECHA_RECEPCION_BANCO as FECHA_RECEPCION
+    FROM
+        CLAP c
+    WHERE c.TIPO_TRX = 'PAGADA';
+"""
